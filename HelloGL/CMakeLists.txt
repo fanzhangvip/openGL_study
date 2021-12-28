@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 ## 添加头文件
 set(GLFW_H /usr/local/include)
-set(GLAD_H ${PROJECT_SOURCE_DIR}/include)
+set(GLAD_H ../glad/${PROJECT_SOURCE_DIR}/include)
 include_directories(${GLAD_H} ${GLFW_H})
 
 
@@ -15,7 +15,7 @@ set(GLFW_LINK /usr/local/lib/libglfw.3.dylib)
 link_libraries(${GLFW_LINK})
 
 ## 执行编译命令
-set(SOURCES glad.c main.cpp)
+set(SOURCES ../glad/glad.c main.cpp)
 
 add_executable(HelloGL ${SOURCES})
 
